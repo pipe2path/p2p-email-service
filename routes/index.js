@@ -25,7 +25,7 @@ router.get('/send', function(req, res){
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
     if (error){
-      res.send("error");
+      res.send("error: " + error);
     }
     else{
       console.log("Message sent: " + response.message);
