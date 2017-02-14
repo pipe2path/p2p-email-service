@@ -20,10 +20,11 @@ router.get('/', function(req, res, next) {
 router.get('/send', function(req, res){
   var name = req.query.name;
   var mailOptions = {
-    from: 'kevinmenezes@yahoo.com',
     to: 'kmenezes@gmail.com',
-    subject: req.query.subject,
-    text: 'From ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.query.text
+    subject: 'Ice Skating Lessons',
+    text: 'Name: ' + name +
+          String.fromCharCode(13) + String.fromCharCode(13) + req.query.from +
+          String.fromCharCode(13) + String.fromCharCode(13) + req.query.text
   }
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
