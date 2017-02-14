@@ -3,6 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var nodemailer = require('nodemailer');
+var cors = require('cors');
 
 var index = require('./routes/index');
 
@@ -17,6 +18,7 @@ app.set('view engine', 'jade');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 
 app.use('/', index);
 
