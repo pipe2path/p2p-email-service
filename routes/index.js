@@ -27,6 +27,8 @@ router.get('/send', function(req, res){
           String.fromCharCode(13) + String.fromCharCode(13) + req.query.text
   }
   console.log(mailOptions);
+
+  res.setHeader('Access-Control-Allow-Origin','*');
   smtpTransport.sendMail(mailOptions, function(error, response){
     if (error){
       res.send("error: " + error);
