@@ -31,11 +31,12 @@ router.get('/send', function(req, res){
   res.setHeader('Access-Control-Allow-Origin','*');
   smtpTransport.sendMail(mailOptions, function(error, response){
     if (error){
-      res.send("error: " + error);
+      console.log('Error: ' + error);
+      res.end("error: " + error);
     }
     else{
       console.log("Message sent: " + response);
-      res.send("sent");
+      res.end("sent");
     }
   })
 })
