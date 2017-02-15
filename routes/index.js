@@ -34,7 +34,7 @@ router.get('/send', function(req, res){
       res.send("error: " + error);
     }
     else{
-      console.log("Message sent: " + response.message);
+      console.log("Message sent: " + response);
       res.send("sent");
     }
   })
