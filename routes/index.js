@@ -14,7 +14,8 @@ var smtpTransport = nodemailer.createTransport({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  //res.render('index', { title: 'Express' });
+  res.send('Get request received');
 });
 
 router.get('/send', function(req, res){

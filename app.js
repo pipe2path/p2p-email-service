@@ -40,8 +40,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3025, function() {
-      console.log('Email service listening on port 3025');
+app.listen(3050, function() {
+      console.log('Email service listening on port 3050');
 })
 
 module.exports = app;
