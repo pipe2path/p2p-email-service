@@ -20,6 +20,7 @@ router.get('/', function(req, res, next) {
 router.get('/send', function(req, res){
   var name = req.query.name;
   var mailOptions = {
+    from: 'kmenezes@gmail.com',
     to: 'kmenezes@gmail.com',
     subject: req.query.subject,
     text: 'Name: ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.query.text
