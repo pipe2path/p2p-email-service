@@ -3,13 +3,21 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 
 var smtpTransport = nodemailer.createTransport({
-  servoce:"gmail",
-  host: "smtp.gmail.com",
-  //port: 465,
+  //servoce:"gmail",
+  //host: "smtp.gmail.com",
+  ////port: 465,
+  ////secure: true,
+  //auth: {
+  //    user: "kmenezes@gmail.com",
+  //    pass: "Jianada1"
+  //}
+
+  host: "smtpout.secureserver.net",
+  port: 80,
   //secure: true,
   auth: {
-      user: "kmenezes@gmail.com",
-      pass: "Jianada1"
+    user: "info@sunobi.com",
+    pass: "sbiinfo"
   }
 });
 
@@ -22,7 +30,7 @@ router.get('/', function(req, res, next) {
 router.get('/send', function(req, res){
   var name = req.query.name;
   var mailOptions = {
-    from: 'kmenezes@gmail.com',
+    from: 'info@sunobi.com',
     to: 'kmenezes@gmail.com',
     subject: req.query.subject,
     text: 'Name: ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.query.text
