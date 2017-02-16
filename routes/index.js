@@ -3,9 +3,10 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 
 var smtpTransport = nodemailer.createTransport({
+  servoce:"gmail",
   host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  //port: 465,
+  //secure: true,
   auth: {
       user: "kmenezes@gmail.com",
       pass: "Jianada1"
