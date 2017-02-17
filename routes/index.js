@@ -44,7 +44,7 @@ router.get('/send', function(req, res){
       res.end("error: " + error);
     }
     else{
-      console.log("Message sent: " + response);
+      console.log("Message sent: " + response.sendStatus(200));
       res.end("sent");
     }
   })
