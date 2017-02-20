@@ -28,12 +28,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/send', function(req, res){
-  var name = req.query.name;
+  var name = req.body.name;
   var mailOptions = {
     from: 'info@sunobi.com',
     to: 'kmenezes@gmail.com',
-    subject: req.query.subject,
-    text: 'Name: ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.query.text
+    subject: req.body.subject,
+    text: 'Name: ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.body.text
   }
   console.log(mailOptions);
 
