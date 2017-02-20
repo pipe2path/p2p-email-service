@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
   res.send('Get request received');
 });
 
-router.get('/send', function(req, res){
+router.post('/send', function(req, res){
   var name = req.query.name;
   var mailOptions = {
     from: 'info@sunobi.com',
