@@ -6,6 +6,7 @@ var nodemailer = require('nodemailer');
 var cors = require('cors');
 
 var index = require('./routes/index');
+var contactform = require('./routes/contactform');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use('/', index);
+app.use('/contactform', contactform);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
