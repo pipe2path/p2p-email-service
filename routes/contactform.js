@@ -4,8 +4,8 @@ var nodemailer = require('nodemailer');
 
 let transporter = nodemailer.createTransport({
     sendmail: true,
-    newline: 'unix',
-    path: '/usr/sbin/sendmail'
+    newline: 'unix'
+    //path: '/usr/sbin/sendmail'
 });
 
 /* GET home page. */
