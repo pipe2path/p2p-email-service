@@ -7,8 +7,8 @@ var transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'cardelectricemail@gmail.com', // Your email id
-        pass: 'cardelectric1' // Your password
+        user: process.env.user, // Your email id
+        pass: process.env.pass // Your password
     },
     tls: {
         // do not fail on invalid certs
@@ -29,7 +29,9 @@ var mailOptions = {
     from: 'admin@cardelectric.com',
     to: 'kevinmenezes@yahoo.com',
     subject: "Contact form submitted",
-    text: 'Name: ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.body.text,
+    text: 'Name: ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.body.phone + 
+                String.fromCharCode(13) + String.fromCharCode(13) + req.body.email + 
+            String.fromCharCode(13) + String.fromCharCode(13) + req.body.comments ,
     auth: {
 
     }
