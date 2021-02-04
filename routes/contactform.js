@@ -27,7 +27,7 @@ var name = req.body.name;
     
 var mailOptions = {
     from: 'admin@cardelectric.com',
-    to: 'cardelectric@yahoo.com, kevinmenezes@yahoo.com',
+    to: 'kevinmenezes@yahoo.com',
     subject: "Contact form submitted",
     text: 'Name: ' + name + String.fromCharCode(13) + String.fromCharCode(13) + req.body.text,
     auth: {
