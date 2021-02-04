@@ -48,7 +48,7 @@ transporter.sendMail(mailOptions, function(error, response){
     res.end("error: " + error);
     }
     else{
-        res.redirect("http://cardenaselectric.netlify.com");
+        res.redirect("http://cardenaselectric.netlify.com/#contact_form");
     }
 })
 })
