@@ -48,8 +48,7 @@ transporter.sendMail(mailOptions, function(error, response){
     res.end("error: " + error);
     }
     else{
-    console.log("Message sent");
-    res.end("sent");
+        res.redirect("/");
     }
 })
 })
