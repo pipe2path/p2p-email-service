@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 
-console.log('password' + process.env.USERNAME);
+console.log('user: ' + process.env.USERNAME);
+console.log('pass: ' + process.env.PASSWORD);
 
 var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
