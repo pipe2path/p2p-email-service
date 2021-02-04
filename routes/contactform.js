@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 
+console.log('password' + process.env.USERNAME);
+
 var transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
